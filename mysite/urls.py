@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from mysite.views import hello, homepage, current_datetime, hours_ahead, contact, thanks
+from django.contrib.auth.views import login, logout
 
 urlpatterns = [
     url(r'^$', homepage),
@@ -25,5 +26,7 @@ urlpatterns = [
     url(r'^time/plus/(\d{1,2})/$', hours_ahead),
     url(r'^contact/$', contact),
     url(r'^contact/thanks/$', thanks),
+    url(r'^accounts/login/$',  login),
+    url(r'^accounts/logout/$', logout),
     url(r'^', include('books.urls')),
 ]
