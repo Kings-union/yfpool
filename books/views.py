@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from books.models import Book
+from books.models import Book, Publisher
+from django.views.generic import ListView
 
 # Create your views here.
 
@@ -19,3 +20,7 @@ def search(request):
             books = Book.objects.filter(title__icontains=q)
             return render(request, 'books/search_results.html', {'books': books, 'query': q})
     return render(request, "books/search-form.html", {"error": error})
+
+
+class PublisherList(ListView):
+    model = Publisher
