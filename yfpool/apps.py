@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class RdbossConfig(AppConfig):
-    name = 'rdboss'
+    name = 'yfpool'
