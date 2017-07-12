@@ -6,7 +6,7 @@ from django.core.mail import send_mail, get_connection
 
 
 def hello(request):
-    return HttpResponse("Hello World")
+    return render(request, 'base/homepage.html')
 
 
 def homepage(request):
