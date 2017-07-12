@@ -17,6 +17,7 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from mysite.views import hello, homepage, current_datetime, hours_ahead, contact, thanks
 from django.contrib.auth.views import login, logout
+from yfpool import views
 
 urlpatterns = [
     url(r'^$', homepage),
@@ -29,5 +30,6 @@ urlpatterns = [
     url(r'^accounts/login/$',  login),
     url(r'^accounts/logout/$', logout),
     url(r'^', include('books.urls')),
+    url(r'^', include('yfpool.urls')),
     url('^', include('django.contrib.auth.urls')),
 ]
