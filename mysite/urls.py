@@ -28,6 +28,6 @@ urlpatterns = [
     url(r'^contact/thanks/$', thanks),
     url(r'^accounts/login/$',  login),
     url(r'^accounts/logout/$', logout),
-    url(r'^', include('books.urls')),
+    url(r'^', include('yfpool.urls')),
     url('^', include('django.contrib.auth.urls')),
 ]
