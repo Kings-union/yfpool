@@ -1,0 +1,30 @@
+.carousel-inner{
+    height:550px;
+}
+
+.big_content{
+    padding-top:0px;
+}
+
+.search_id{
+    height:80px;
+    font-size:24px;
+}
+
+.jumbotron{
+    height:590px;
+}
+.jumbotron > h1,p {
+    padding-left: 100px;
+}
+.jumbotron > a {
+    margin-left: 500px;
+}
+.category_row{
+    margin-left:100px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+
+//at.alicdn.com/t/font_90ugwx88a5vu0udi.css

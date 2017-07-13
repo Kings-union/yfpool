@@ -1,1 +1,271 @@
-{% extends "base/frame.html" %}
+{% extends "base/base.html" %}
+{% block title %}Hello World{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="static/iconfont/iconfont.css">
+<!--<script src="static/iconfont/iconfont.js"></script>-->
+<script src="//at.alicdn.com/t/font_cfbzqxsr6kcsor.js"></script>
+<script src="static/js/homepage.js"></script>
+<style type="text/css">
+    .icon {
+      /* 通过设置 font-size 来改变图标大小 */
+      width: 5em; height: 5em;
+      /* 图标和文字相邻时，垂直对齐 */
+      vertical-align: -0.15em;
+      /* 通过设置 color 来改变 SVG 的颜色/fill */
+      fill: currentColor;
+      /* path 和 stroke 溢出 viewBox 部分在 IE 下会显示
+         normalize.css 中也包含这行 */
+      overflow: hidden;
+    }
+
+</style>
+<div class="big_body" oncontextmenu="return false">
+    <!-- nav start -->
+    <div class="container">
+        <div class="navbar-header">
+            <a href="../" class="navbar-brand">Bootswatch</a>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Themes <span
+                            class="caret"></span></a>
+                    <ul class="dropdown-menu" aria-labelledby="themes">
+                        <li><a href="../default/">Default</a></li>
+                        <li class="divider"></li>
+                        <li><a href="../cerulean/">Cerulean</a></li>
+                        <li><a href="../cosmo/">Cosmo</a></li>
+                        <li><a href="../cyborg/">Cyborg</a></li>
+                        <li><a href="../darkly/">Darkly</a></li>
+                        <li><a href="../flatly/">Flatly</a></li>
+                        <li><a href="../journal/">Journal</a></li>
+                        <li><a href="../lumen/">Lumen</a></li>
+                        <li><a href="../paper/">Paper</a></li>
+                        <li><a href="../readable/">Readable</a></li>
+                        <li><a href="../sandstone/">Sandstone</a></li>
+                        <li><a href="../simplex/">Simplex</a></li>
+                        <li><a href="../slate/">Slate</a></li>
+                        <li><a href="../solar/">Solar</a></li>
+                        <li><a href="../spacelab/">Spacelab</a></li>
+                        <li><a href="../superhero/">Superhero</a></li>
+                        <li><a href="../united/">United</a></li>
+                        <li><a href="../yeti/">Yeti</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="../help/">Help</a>
+                </li>
+                <li>
+                    <a href="http://news.bootswatch.com">Blog</a>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Paper <span
+                            class="caret"></span></a>
+                    <ul class="dropdown-menu" aria-labelledby="download">
+                        <li><a href="http://jsfiddle.net/bootswatch/ndax7sh7/">Open Sandbox</a></li>
+                        <li class="divider"></li>
+                        <li><a href="./bootstrap.min.css">bootstrap.min.css</a></li>
+                        <li><a href="./bootstrap.css">bootstrap.css</a></li>
+                        <li class="divider"></li>
+                        <li><a href="./variables.less">variables.less</a></li>
+                        <li><a href="./bootswatch.less">bootswatch.less</a></li>
+                        <li class="divider"></li>
+                        <li><a href="./_variables.scss">_variables.scss</a></li>
+                        <li><a href="./_bootswatch.scss">_bootswatch.scss</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://builtwithbootstrap.com/" target="_blank">Built With Bootstrap</a></li>
+                <li><a href="https://wrapbootstrap.com/?ref=bsw" target="_blank">WrapBootstrap</a></li>
+            </ul>
+
+        </div>
+    </div>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#example-navbar-collapse">
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">YFpool</a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="example-navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">iOS</a></li>
+                    <li><a href="#">SVN</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Java <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">jmeter</a></li>
+                            <li><a href="#">EJB</a></li>
+                            <li><a href="#">Jasper Report</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">分离的链接</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">另一个分离的链接</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- nav end -->
+    <link rel="stylesheet" href="/static/css/style.css">
+
+
+    <div class="big_content">
+        <div id="myCarousel" class="carousel slide" ondragstart="return false">
+            <!-- 轮播（Carousel）指标 -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+            </ol>
+            <!-- 轮播（Carousel）项目 -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img class="ad_home_img" src="/static/image/ad/slide1.png" alt="First slide">
+                </div>
+                <div class="item">
+                    <img class="ad_home_img" src="/static/image/ad/slide2.png" alt="Second slide">
+                </div>
+                <div class="item">
+                    <img class="ad_home_img" src="/static/image/ad/slide3.png" alt="Third slide">
+                </div>
+                <div class="item">
+                    <img class="ad_home_img" src="/static/image/ad/slide4.png" alt="Fourth slide">
+                </div>
+                <form class="bs-example bs-example-form" role="form" style="position: absolute; top: 80%; left: 10%; ">
+                    <div class="row">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-sousuo2"></use>
+                                </svg>
+                            </span>
+                            <input type="text" class="form-control search_id input_search">
+                            <span class="input-group-btn">
+                                <button class="btn btn-primary btn-lg search_id" type="button">搜索有趣的项目</button>
+                            </span>
+                        </div><!-- /input-group -->
+                    </div><!-- /.col-lg-6 -->
+                </form>
+            </div>
+        </div>
+        <div class="jumbotron category_frame" style="display:none;">
+            <h1>category_frame</h1>
+            <div class="row category_row">
+                <div class="col-xs-6 col-sm-3">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-gouwu"></use>
+                    </svg>
+                    网站、IT 和 软件 (20788)
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-zhuangxiu"></use>
+                    </svg>
+                    网站、IT 和 软件 (20788)
+                </div>
+                <!-- Add the extra clearfix for only the required viewport -->
+                <div class="clearfix visible-xs-block"></div>
+                <div class="col-xs-6 col-sm-3">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-banjia"></use>
+                    </svg>
+                    网站、IT 和 软件 (20788)
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-xuexiao"></use>
+                    </svg>
+                    网站、IT 和 软件 (20788)
+                </div>
+            </div>
+            <div class="row category_row">
+                <div class="col-xs-6 col-sm-3">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-yiyuan"></use>
+                    </svg>
+                    网站、IT 和 软件 (20788)
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-yangtai"></use>
+                    </svg>
+                    网站、IT 和 软件 (20788)
+                </div>
+                <!-- Add the extra clearfix for only the required viewport -->
+                <div class="clearfix visible-xs-block"></div>
+                <div class="col-xs-6 col-sm-3">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-gongjiao"></use>
+                    </svg>
+                    网站、IT 和 软件 (20788)
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-ditie"></use>
+                    </svg>
+                    网站、IT 和 软件 (20788)
+                </div>
+            </div>
+            <div class="row category_row">
+                <div class="col-xs-6 col-sm-3">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-loupan"></use>
+                    </svg>
+                    网站、IT 和 软件 (20788)
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-linyu"></use>
+                    </svg>
+                    网站、IT 和 软件 (20788)
+                </div>
+                <!-- Add the extra clearfix for only the required viewport -->
+                <div class="clearfix visible-xs-block"></div>
+                <div class="col-xs-6 col-sm-3">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-linyu"></use>
+                    </svg>
+                    网站、IT 和 软件 (20788)
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-shangdian"></use>
+                    </svg>
+                    网站、IT 和 软件 (20788)
+                </div>
+            </div>
+        </div>
+
+        <div class="jumbotron">
+            <h1>有项目需要发布？</h1>
+            <p>立即点击下方发布新的项目，选择您的项目类型，让所有精英关注到它.</p>
+            <a class="btn btn-primary btn-lg">立刻发布</a>
+        </div>
+
+        <div class="jumbotron">
+            <h1>雇用威客和在线寻找自由职业，立即启动您的项目 </h1>
+            <p>立即点击下方发布新的项目，选择您的项目类型，让所有精英关注到它..</p>
+            <a class="btn btn-primary btn-lg">立刻发布</a>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

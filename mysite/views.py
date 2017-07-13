@@ -5,12 +5,12 @@ from mysite.forms import ContactForm
 from django.core.mail import send_mail, get_connection
 
 
-def hello(request):
+def homepage(request):
     return render(request, 'base/homepage.html')
 
 
-def homepage(request):
-    return HttpResponse("I am a home page! Welcome")
+def hello(request):
+    return HttpResponse("I am a joke")
 
 
 def current_datetime(request):
