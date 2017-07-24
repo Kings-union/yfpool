@@ -8,6 +8,9 @@ from django.core.mail import send_mail, get_connection
 def homepage(request):
     return render(request, 'base/homepage.html')
 
+def lists(request):
+    return render(request, 'base/lists.html')
+
 
 def hello(request):
     return HttpResponse("I am a joke")
@@ -49,3 +52,4 @@ def contact(request):
 
 def thanks(request):
     return HttpResponse("Thank you for your email")
+

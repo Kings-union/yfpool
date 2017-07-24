@@ -15,11 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from mysite.views import hello, homepage, current_datetime, hours_ahead, contact, thanks
+from mysite.views import hello, homepage, lists,current_datetime, hours_ahead, contact, thanks
 from django.contrib.auth.views import login, logout
 
 urlpatterns = [
     url(r'^$', homepage),
+    url(r'^lists/', lists),
     url(r'^admin/', admin.site.urls),
     url(r'^hello/$', hello),
     url(r'^time/$', current_datetime),
