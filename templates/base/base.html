@@ -1,12 +1,17 @@
+{% load compress %}
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 {% load staticfiles %}
 <html lang="en">
 <head>
     <title>{% block title %}{% endblock %}</title>
-    <!-- Bootstrap core CSS and js -->
-    <script src="{% static 'jquery-3.2.1.min.js' %}"></script>
+
+    {% compress css %}
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    {% endcompress %}
+    {% compress js %}
+    <script src="{% static 'jquery-3.2.1.min.js' %}"></script>
     <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    {% endcompress %}
 </head>
 <body>
     {% block content %}{% endblock %}

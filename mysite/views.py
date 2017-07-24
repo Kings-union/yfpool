@@ -3,8 +3,9 @@ from django.shortcuts import render
 import datetime
 from mysite.forms import ContactForm
 from django.core.mail import send_mail, get_connection
+from django.views.decorators.gzip import gzip_page
 
-
+@gzip_page
 def homepage(request):
     return render(request, 'base/homepage.html')
 

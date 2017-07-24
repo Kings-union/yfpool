@@ -23,6 +23,7 @@ SECRET_KEY = '4))#y-nq-d0_5rv@(bvdu!-10au8hv!1#m11wqz&u53^kzwfmb'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+COMPRESS_ENABLED = True
 
 ALLOWED_HOSTS = []
 
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'books.apps.BooksConfig',
     'yfpool.apps.RdbossConfig',
+    'compressor',
 ]
 
 MIDDLEWARE = [
@@ -114,8 +116,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+
+COMPRESS_ROOT = 'static/'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
+)
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    # other finders..
+    'compressor.finders.CompressorFinder',
 )
