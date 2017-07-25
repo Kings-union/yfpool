@@ -1,3 +1,4 @@
+li {list-style-type:none;}
 .carousel-inner{
     height:550px;
 }
@@ -14,14 +15,14 @@
     width: 400px;
 }
 
-.jumbotron:not(.category_frame){
-    height:590px;
-}
 .jumbotron > h1,p {
-    padding-left: 100px;
+    padding-left: 150px;
 }
-.jumbotron > a {
-    margin-left: 500px;
+.ad{background-color: #ffffff;}
+.ad{background-color: #ffffff;}
+.ad .row {
+    margin-left: 200px;
+    margin-right: 200px;
 }
 .category_row{
     margin-left:100px;
