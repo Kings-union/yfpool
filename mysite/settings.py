@@ -25,7 +25,7 @@ SECRET_KEY = '4))#y-nq-d0_5rv@(bvdu!-10au8hv!1#m11wqz&u53^kzwfmb'
 DEBUG = True
 COMPRESS_ENABLED = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*', ]
 
 # Application definition
 
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'books.apps.BooksConfig',
     'yfpool.apps.RdbossConfig',
     'compressor',
+    'gunicorn',
 ]
 
 MIDDLEWARE = [
@@ -117,7 +118,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 # compress
-COMPRESS_ROOT = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
